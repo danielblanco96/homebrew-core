@@ -1,11 +1,10 @@
 class TclTk < Formula
   desc "Tool Command Language"
   homepage "https://www.tcl-lang.org"
-  url "https://downloads.sourceforge.net/project/tcl/Tcl/9.0.4/tcl9.0.4-src.tar.gz"
-  mirror "https://fossies.org/linux/misc/tcl9.0.4-src.tar.gz"
-  sha256 "d0aed49230bc02a65c1e0229e65f34590a4b037ec40d546f32573b467f7551ea"
+  url "https://downloads.sourceforge.net/project/tcl/Tcl/9.1.0/tcl9.1.0-src.tar.gz"
+  mirror "https://fossies.org/linux/misc/tcl9.1.0-src.tar.gz"
+  sha256 "536c45543f64d6eb11832d97ba3494aacff046fbc5040273bd55258d0e448ff1"
   license "TCL"
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -21,6 +20,7 @@ class TclTk < Formula
     sha256 x86_64_linux:      "996ee7af1459ac5daf0c9725a1e36940d80ad2d8a0973cc5080e55cc3928068f"
   end
 
+  depends_on "harfbuzz"
   depends_on "libtommath"
 
   on_linux do
@@ -55,9 +55,9 @@ class TclTk < Formula
   end
 
   resource "tk" do
-    url "https://downloads.sourceforge.net/project/tcl/Tcl/9.0.4/tk9.0.4-src.tar.gz"
-    mirror "https://fossies.org/linux/misc/tk9.0.4-src.tar.gz"
-    sha256 "d7a146d2917eb8b5cc95276dbf0e3d03c7464d2b19c1675357857c989301dbb4"
+    url "https://downloads.sourceforge.net/project/tcl/Tcl/9.1.0/tk9.1.0-src.tar.gz"
+    mirror "https://fossies.org/linux/misc/tk9.1.0-src.tar.gz"
+    sha256 "772ce7a97c07c2db4c957c93af7ab4dff4bd3037772836b6afbcd0974023b3d6"
 
     livecheck do
       formula :parent
