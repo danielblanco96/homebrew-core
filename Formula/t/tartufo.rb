@@ -4,10 +4,9 @@ class Tartufo < Formula
   desc "Searches through git repositories for high entropy strings and secrets"
   homepage "https://tartufo.readthedocs.io/en/stable/"
   # TODO: Switch to PyPI when upstream fixes workflow for 2FA
-  url "https://github.com/godaddy/tartufo/archive/refs/tags/v6.0.0.tar.gz"
-  sha256 "ba84bb6192a3647a0dd2f8b4c08c7aff46e8d5bc742e13ee1714477ae8ad7787"
+  url "https://github.com/godaddy/tartufo/archive/refs/tags/v6.0.1.tar.gz"
+  sha256 "d718aae7de80dcf933d0088329e55dc0751d5e14ecfc954880f4de15494bcb28"
   license "GPL-2.0-only"
-  revision 7
   head "https://github.com/godaddy/tartufo.git", branch: "main"
 
   bottle do
@@ -18,6 +17,9 @@ class Tartufo < Formula
   depends_on "python@3.14"
 
   uses_from_macos "libffi"
+
+  deprecate! date: "2026-09-30", because: :repo_archived
+  disable! date: "2027-09-30", because: :repo_archived
 
   pypi_packages exclude_packages: "pygit2"
 
